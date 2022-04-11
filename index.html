@@ -6,7 +6,8 @@
     <!--A Meta Tag For Setting Character Sets To 'UTF-8'-->
     <meta charset="UTF-8">
     <!--A Meta Tag For Responsiveness-->
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!--A Meta Tag For Browser Refresh-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Description Meta Tag For Seo Performance-->
@@ -20,11 +21,84 @@
     <!--Linking Our Css File-->
     <link rel="stylesheet" href="src/style.css">
     <!--Title Of Page-->
-    <title>Advice Generator Made By Mahdi Tasha</title>
+    <title>To Do App Made By Mahdi Tasha</title>
 </head>
-<body>
+<body data-theme="dark">
 <!--Structure Of Page Goes Here-->
-
+<!--Top Side In The Background-->
+<div class="bg-top-section"></div>
+<!--To Do Holder-->
+<div class="todo-holder">
+    <!--To Do-->
+    <div class="todo-holder--todo">
+        <!--Top Side-->
+        <div class="todo-holder--todo--top-side">
+            <h1>TODO</h1>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                    <path fill="#FFF" fill-rule="evenodd"
+                          d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/>
+                </svg>
+            </button>
+        </div>
+        <!--Top Side Input-->
+        <div class="todo-holder--todo--input-holder">
+            <input type="checkbox">
+            <input type="text" placeholder="Create a new todo...">
+        </div>
+        <!--List Of To Dos-->
+        <ul class="todo-holder--todo--list">
+            <li>
+                <div class="todo-holder--todo--list--item">
+                    <input type="checkbox" checked>
+                    <h3>Complete online JavaScript course</h3>
+                </div>
+            </li>
+            <li>
+                <div class="todo-holder--todo--list--item">
+                    <input type="checkbox">
+                    <h3>Jog around the park 3x</h3>
+                </div>
+            </li>
+            <li>
+                <div class="todo-holder--todo--list--item">
+                    <input type="checkbox">
+                    <h3>10 minutes meditation</h3>
+                </div>
+            </li>
+            <li>
+                <div class="todo-holder--todo--list--item">
+                    <input type="checkbox">
+                    <h3>Read for 1 hour</h3>
+                </div>
+            </li>
+            <li>
+                <div class="todo-holder--todo--list--item">
+                    <input type="checkbox">
+                    <h3>Pick Up Groceries</h3>
+                </div>
+            </li>
+            <li>
+                <div class="todo-holder--todo--list--item">
+                    <input type="checkbox">
+                    <h3>Complete Todo App On Frontend Mentor</h3>
+                </div>
+            </li>
+        </ul>
+        <!--Bottom Of Todo List-->
+        <div class="todo-holder--todo--bottom-items">
+            <h6 class="todo-holder--todo--bottom-items--items-left"><span>5</span>items left</h6>
+            <div class="todo-holder--todo--bottom-items--center-items">
+                <button class="todo-holder--todo--bottom-items--center-items-button active">All</button>
+                <button class="todo-holder--todo--bottom-items--center-items-button">Active</button>
+                <button class="todo-holder--todo--bottom-items--center-items-button">Completed</button>
+            </div>
+            <button class="todo-holder--todo--bottom-items--clear-btn">Clear Completed</button>
+        </div>
+    </div>
+    <!--Bottom Of Todos-->
+    <div class="todo-holder--todo--bottom-of-todos"><h6 class="todo-holder--todo--bottom-of-todos--inner-text">Drag An Drop To Record List</h6></div>
+</div>
 <!--Linking Our Js File-->
 <script src="src/script.js"></script>
 </body>
