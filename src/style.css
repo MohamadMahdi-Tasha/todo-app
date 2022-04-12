@@ -175,7 +175,7 @@ body[data-theme='dark'] .todo-holder--todo--bottom-of-todos--inner-text {color: 
 .todo-checkbox:checked:after {content: '✔️';}
 .todo-checkbox:checked {background: var(--Check-Background);}
 .todo-checkbox:not(:checked):hover {border-color: hsl(192, 100%, 67%) !important;}
-.todo-checkbox:checked ~ .todo-input {
+.todo-checkbox:not(:first-of-type):checked ~ .todo-input {
     text-decoration: line-through;
     pointer-events: none;
 }
