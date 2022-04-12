@@ -270,3 +270,35 @@ body[data-theme='light'] .todo-holder--todo--bottom-items--clear-btn:hover {colo
     .todo-holder--todo--bottom-items--clear-btn{color: rgba(0,0,0,.6);}
     .todo-holder--todo--bottom-of-todos--inner-text {color: rgba(0,0,0,.6);}
 }
+
+@media (max-width: 804px) {  .todo-holder--todo {width: 100%;}  }
+@media (max-width: 440px) {
+    .todo-holder--todo--bottom-items--center-items-button {padding: 1rem;}
+    .todo-holder--todo--bottom-items--items-left,
+    .todo-holder--todo--bottom-items--clear-btn{margin: 1rem;}
+    .todo-holder--todo--bottom-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: .5rem;
+        padding: 0;
+    }
+
+    .todo-holder--todo--bottom-items--center-items {
+        width: 100%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 316px) {
+    .todo-holder--todo--bottom-items--center-items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+    }
+}
