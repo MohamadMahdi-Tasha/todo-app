@@ -45,6 +45,7 @@ body[data-theme='dark'] .todo-holder--todo--bottom-items{background-color: var(-
 body[data-theme='dark'] .todo-holder--todo--bottom-items--items-left,
 body[data-theme='dark'] .todo-holder--todo--bottom-items--center-items-button,
 body[data-theme='dark'] .todo-holder--todo--bottom-items--clear-btn{color: rgba(256,256,256,.2);}
+body[data-theme='dark'] .todo-holder--todo--bottom-of-todos--inner-text {color: rgba(256,256,256,.2);}
 
 /*Styles*/
 .todo-holder--todo {width: 50%;}
@@ -165,5 +166,4 @@ body[data-theme='dark'] .todo-holder--todo--bottom-items--clear-btn{color: rgba(
 .todo-holder--todo--bottom-of-todos--inner-text {
     font-size: 15px;
     font-weight: normal;
-    color: rgba(256,256,256,.2);
 }
