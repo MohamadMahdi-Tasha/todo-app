@@ -38,8 +38,9 @@ button {
 body[data-theme='dark'] {background-color: var(--Very-Dark-Blue);}
 body[data-theme='dark'] .todo-holder--todo--input-holder {background-color: var(--Very-Dark-Desaturated-Blue);}
 body[data-theme='dark'] .todo-checkbox{border: 1px solid rgba(256,256,256,.2);}
-body[data-theme='dark'] .todo-input{color: var(--Very-Light-Gray);}
-body[data-theme='dark'] .todo-input::placeholder {color: var(--Light-Grayish-Blue);}
+body[data-theme='dark'] .todo-input{color: rgba(256, 256, 256, .5);}
+body[data-theme='dark'] .todo-input:focus{color: white;}
+body[data-theme='dark'] .todo-input::placeholder {color: rgba(256, 256, 256, .2);}
 body[data-theme='dark'] .todo-holder--todo--list--item,
 body[data-theme='dark'] .todo-holder--todo--bottom-items{background-color: var(--Very-Dark-Desaturated-Blue);}
 body[data-theme='dark'] .todo-holder--todo--bottom-items--items-left,
@@ -105,12 +106,14 @@ body[data-theme='dark'] .todo-holder--todo--bottom-of-todos--inner-text {color: 
     border-radius: 100%;
     margin-right: 1rem;
     cursor: pointer;
+    transition: .3s;
 }
 
 .todo-input {
     width: 80%;
     background-color: unset;
     border: none;
+    transition: .3s;
 }
 
 .todo-holder--todo--list--item-and-bottom-side-holder {
@@ -167,3 +170,19 @@ body[data-theme='dark'] .todo-holder--todo--bottom-of-todos--inner-text {color: 
     font-size: 15px;
     font-weight: normal;
 }
+
+/*Pseudo Selectors*/
+.todo-checkbox:checked:after {content: '✔️';}
+.todo-checkbox:checked {background: var(--Check-Background);}
+.todo-checkbox:not(:checked):hover {border-color: hsl(192, 100%, 67%) !important;}
+.todo-checkbox:checked ~ .todo-input {
+    text-decoration: line-through;
+    pointer-events: none;
+}
+
+/*Theme Colors*/
+body[data-theme='dark'] .todo-checkbox:checked{border: 1px solid white;}
+body[data-theme='dark'] .todo-checkbox:checked ~ .todo-input{color: rgba(256,256,256,.2);}
+body[data-theme='dark'] .todo-holder--todo--list--item:hover > .todo-checkbox:not(:checked) ~ .todo-input{color: white;}
+body[data-theme='dark'] .todo-holder--todo--bottom-items--center-items-button:hover {color: rgba(256, 256, 256, .5);}
+body[data-theme='dark'] .todo-holder--todo--bottom-items--clear-btn:hover {color: rgba(256, 256, 256, .5);}
