@@ -48,6 +48,19 @@ body[data-theme='dark'] .todo-holder--todo--bottom-items--center-items-button,
 body[data-theme='dark'] .todo-holder--todo--bottom-items--clear-btn{color: rgba(256,256,256,.2);}
 body[data-theme='dark'] .todo-holder--todo--bottom-of-todos--inner-text {color: rgba(256,256,256,.2);}
 
+body[data-theme='light'] {background-color: white;}
+body[data-theme='light'] .todo-holder--todo--input-holder {background-color: white;}
+body[data-theme='light'] .todo-checkbox{border: 1px solid rgba(0,0,0,.2);}
+body[data-theme='light'] .todo-input{color: rgba(0, 0, 0, .5) !important;}
+body[data-theme='light'] .todo-input:focus{color: black !important;}
+body[data-theme='light'] .todo-input::placeholder {color: rgba(0, 0, 0, .5);}
+body[data-theme='light'] .todo-holder--todo--list--item,
+body[data-theme='light'] .todo-holder--todo--bottom-items{background-color: white;}
+body[data-theme='light'] .todo-holder--todo--bottom-items--items-left,
+body[data-theme='light'] .todo-holder--todo--bottom-items--center-items-button,
+body[data-theme='light'] .todo-holder--todo--bottom-items--clear-btn{color: rgba(0,0,0,.6);}
+body[data-theme='light'] .todo-holder--todo--bottom-of-todos--inner-text {color: rgba(0,0,0,.6);}
+
 /*Styles*/
 .todo-holder--todo {width: 50%;}
 .todo-holder--todo--list {list-style: none;}
@@ -210,3 +223,9 @@ body[data-theme='dark'] .todo-checkbox:checked ~ .todo-input{color: rgba(256,256
 body[data-theme='dark'] .todo-holder--todo--list--item:hover > div:first-of-type > .todo-checkbox:not(:checked) ~ .todo-input{color: white;}
 body[data-theme='dark'] .todo-holder--todo--bottom-items--center-items-button:hover {color: white;}
 body[data-theme='dark'] .todo-holder--todo--bottom-items--clear-btn:hover {color: white;}
+
+body[data-theme='light'] .todo-checkbox:checked{border: 1px solid black;}
+body[data-theme='light'] .todo-checkbox:checked ~ .todo-input{color: rgba(0,0,0,.2);}
+body[data-theme='light'] .todo-holder--todo--list--item:hover > div:first-of-type > .todo-checkbox:not(:checked) ~ .todo-input{color: black}
+body[data-theme='light'] .todo-holder--todo--bottom-items--center-items-button:hover {color: black;}
+body[data-theme='light'] .todo-holder--todo--bottom-items--clear-btn:hover {color: black;}
