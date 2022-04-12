@@ -27,7 +27,7 @@
     <!--Title Of Page-->
     <title>To Do App Made By Mahdi Tasha</title>
 </head>
-<body data-theme="light">
+<body data-theme="dark">
 <!--Structure Of Page Goes Here-->
 <!--Top Side In The Background-->
 <img class="bg-top-section" src="src/img/bg-top-side.jpg" alt="Image">
@@ -51,54 +51,56 @@
             <input class="todo-input" type="text" placeholder="Create a new todo...">
         </div>
         <div class="todo-holder--todo--list-and-bottom-items-holder">
-            <!--List Of To Dos-->
-            <ul class="todo-holder--todo--list">
-                <li>
-                    <div class="todo-holder--todo--list--item">
-                        <input class="todo-checkbox" type="checkbox" checked>
-                        <input class="todo-input" type="text" value="Complete online JavaScript course">
+            <div class="todo-holder--todo--list--item-and-bottom-side-holder">
+                <!--List Of To Dos-->
+                <ul class="todo-holder--todo--list">
+                    <li>
+                        <div class="todo-holder--todo--list--item">
+                            <input class="todo-checkbox" type="checkbox" checked>
+                            <input class="todo-input" type="text" value="Complete online JavaScript course">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todo-holder--todo--list--item">
+                            <input class="todo-checkbox" type="checkbox">
+                            <input class="todo-input" type="text" value="Jog around the park 3x">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todo-holder--todo--list--item">
+                            <input class="todo-checkbox" type="checkbox">
+                            <input class="todo-input" type="text" value="10 minutes meditation">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todo-holder--todo--list--item">
+                            <input class="todo-checkbox" type="checkbox">
+                            <input class="todo-input" type="text" value="Read for 1 hour">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todo-holder--todo--list--item">
+                            <input class="todo-checkbox" type="checkbox">
+                            <input class="todo-input" type="text" value="Pick Up Groceries">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="todo-holder--todo--list--item">
+                            <input class="todo-checkbox" type="checkbox">
+                            <input class="todo-input" type="text" value="Complete Todo App On Frontend Mentor">
+                        </div>
+                    </li>
+                </ul>
+                <!--Bottom Of Todo List-->
+                <div class="todo-holder--todo--bottom-items">
+                    <h6 class="todo-holder--todo--bottom-items--items-left"><span>5</span>items left</h6>
+                    <div class="todo-holder--todo--bottom-items--center-items">
+                        <button class="todo-holder--todo--bottom-items--center-items-button active">All</button>
+                        <button class="todo-holder--todo--bottom-items--center-items-button">Active</button>
+                        <button class="todo-holder--todo--bottom-items--center-items-button">Completed</button>
                     </div>
-                </li>
-                <li>
-                    <div class="todo-holder--todo--list--item">
-                        <input class="todo-checkbox" type="checkbox">
-                        <input class="todo-input" type="text" value="Jog around the park 3x">
-                    </div>
-                </li>
-                <li>
-                    <div class="todo-holder--todo--list--item">
-                        <input class="todo-checkbox" type="checkbox">
-                        <input class="todo-input" type="text" value="10 minutes meditation">
-                    </div>
-                </li>
-                <li>
-                    <div class="todo-holder--todo--list--item">
-                        <input class="todo-checkbox" type="checkbox">
-                        <input class="todo-input" type="text" value="Read for 1 hour">
-                    </div>
-                </li>
-                <li>
-                    <div class="todo-holder--todo--list--item">
-                        <input class="todo-checkbox" type="checkbox">
-                        <input class="todo-input" type="text" value="Pick Up Groceries">
-                    </div>
-                </li>
-                <li>
-                    <div class="todo-holder--todo--list--item">
-                        <input class="todo-checkbox" type="checkbox">
-                        <input class="todo-input" type="text" value="Complete Todo App On Frontend Mentor">
-                    </div>
-                </li>
-            </ul>
-            <!--Bottom Of Todo List-->
-            <div class="todo-holder--todo--bottom-items">
-                <h6 class="todo-holder--todo--bottom-items--items-left"><span>5</span>items left</h6>
-                <div class="todo-holder--todo--bottom-items--center-items">
-                    <button class="todo-holder--todo--bottom-items--center-items-button active">All</button>
-                    <button class="todo-holder--todo--bottom-items--center-items-button">Active</button>
-                    <button class="todo-holder--todo--bottom-items--center-items-button">Completed</button>
+                    <button class="todo-holder--todo--bottom-items--clear-btn">Clear Completed</button>
                 </div>
-                <button class="todo-holder--todo--bottom-items--clear-btn">Clear Completed</button>
             </div>
         </div>
         <!--Bottom Of Todos-->
