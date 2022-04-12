@@ -15,7 +15,7 @@
     <!--Keywords Meta Tag For Seo Performance-->
     <meta name="keywords" content="To Do, Programme, Routine, todo, frontendmentor, challenge, front-end, job">
     <!--Theme Color Of Page-->
-    <meta name="theme-color" content="hsl(218, 23%, 16%)"/>
+    <meta name="theme-color" content="hsl(235, 21%, 11%)"/>
     <!--Icon Of Page-->
     <link rel="shortcut icon" href="src/img/logo.png">
     <!--Linking Our Css File-->
@@ -30,7 +30,7 @@
 <body data-theme="dark">
 <!--Structure Of Page Goes Here-->
 <!--Top Side In The Background-->
-<div class="bg-top-section"></div>
+<img class="bg-top-section" src="src/img/bg-top-side.jpg" alt="Image">
 <!--To Do Holder-->
 <div class="todo-holder">
     <!--To Do-->
@@ -47,61 +47,63 @@
         </div>
         <!--Top Side Input-->
         <div class="todo-holder--todo--input-holder">
-            <input type="checkbox">
-            <input type="text" placeholder="Create a new todo...">
+            <input class="todo-checkbox" type="checkbox">
+            <input class="todo-input" type="text" placeholder="Create a new todo...">
         </div>
-        <!--List Of To Dos-->
-        <ul class="todo-holder--todo--list">
-            <li>
-                <div class="todo-holder--todo--list--item">
-                    <input type="checkbox" checked>
-                    <h3>Complete online JavaScript course</h3>
+        <div class="todo-holder--todo--list-and-bottom-items-holder">
+            <!--List Of To Dos-->
+            <ul class="todo-holder--todo--list">
+                <li>
+                    <div class="todo-holder--todo--list--item">
+                        <input class="todo-checkbox" type="checkbox" checked>
+                        <input class="todo-input" type="text" value="Complete online JavaScript course">
+                    </div>
+                </li>
+                <li>
+                    <div class="todo-holder--todo--list--item">
+                        <input class="todo-checkbox" type="checkbox">
+                        <input class="todo-input" type="text" value="Jog around the park 3x">
+                    </div>
+                </li>
+                <li>
+                    <div class="todo-holder--todo--list--item">
+                        <input class="todo-checkbox" type="checkbox">
+                        <input class="todo-input" type="text" value="10 minutes meditation">
+                    </div>
+                </li>
+                <li>
+                    <div class="todo-holder--todo--list--item">
+                        <input class="todo-checkbox" type="checkbox">
+                        <input class="todo-input" type="text" value="Read for 1 hour">
+                    </div>
+                </li>
+                <li>
+                    <div class="todo-holder--todo--list--item">
+                        <input class="todo-checkbox" type="checkbox">
+                        <input class="todo-input" type="text" value="Pick Up Groceries">
+                    </div>
+                </li>
+                <li>
+                    <div class="todo-holder--todo--list--item">
+                        <input class="todo-checkbox" type="checkbox">
+                        <input class="todo-input" type="text" value="Complete Todo App On Frontend Mentor">
+                    </div>
+                </li>
+            </ul>
+            <!--Bottom Of Todo List-->
+            <div class="todo-holder--todo--bottom-items">
+                <h6 class="todo-holder--todo--bottom-items--items-left"><span>5</span>items left</h6>
+                <div class="todo-holder--todo--bottom-items--center-items">
+                    <button class="todo-holder--todo--bottom-items--center-items-button active">All</button>
+                    <button class="todo-holder--todo--bottom-items--center-items-button">Active</button>
+                    <button class="todo-holder--todo--bottom-items--center-items-button">Completed</button>
                 </div>
-            </li>
-            <li>
-                <div class="todo-holder--todo--list--item">
-                    <input type="checkbox">
-                    <h3>Jog around the park 3x</h3>
-                </div>
-            </li>
-            <li>
-                <div class="todo-holder--todo--list--item">
-                    <input type="checkbox">
-                    <h3>10 minutes meditation</h3>
-                </div>
-            </li>
-            <li>
-                <div class="todo-holder--todo--list--item">
-                    <input type="checkbox">
-                    <h3>Read for 1 hour</h3>
-                </div>
-            </li>
-            <li>
-                <div class="todo-holder--todo--list--item">
-                    <input type="checkbox">
-                    <h3>Pick Up Groceries</h3>
-                </div>
-            </li>
-            <li>
-                <div class="todo-holder--todo--list--item">
-                    <input type="checkbox">
-                    <h3>Complete Todo App On Frontend Mentor</h3>
-                </div>
-            </li>
-        </ul>
-        <!--Bottom Of Todo List-->
-        <div class="todo-holder--todo--bottom-items">
-            <h6 class="todo-holder--todo--bottom-items--items-left"><span>5</span>items left</h6>
-            <div class="todo-holder--todo--bottom-items--center-items">
-                <button class="todo-holder--todo--bottom-items--center-items-button active">All</button>
-                <button class="todo-holder--todo--bottom-items--center-items-button">Active</button>
-                <button class="todo-holder--todo--bottom-items--center-items-button">Completed</button>
+                <button class="todo-holder--todo--bottom-items--clear-btn">Clear Completed</button>
             </div>
-            <button class="todo-holder--todo--bottom-items--clear-btn">Clear Completed</button>
         </div>
+        <!--Bottom Of Todos-->
+        <div class="todo-holder--todo--bottom-of-todos"><h6 class="todo-holder--todo--bottom-of-todos--inner-text">Drag An Drop To Record List</h6></div>
     </div>
-    <!--Bottom Of Todos-->
-    <div class="todo-holder--todo--bottom-of-todos"><h6 class="todo-holder--todo--bottom-of-todos--inner-text">Drag An Drop To Record List</h6></div>
 </div>
 <!--Linking Our Js File-->
 <script src="src/script.js"></script>
