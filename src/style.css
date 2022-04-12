@@ -175,7 +175,7 @@ body[data-theme='dark'] .todo-holder--todo--bottom-of-todos--inner-text {color: 
 .todo-checkbox:checked:after {content: '✔️';}
 .todo-checkbox:checked {background: var(--Check-Background);}
 .todo-checkbox:not(:checked):hover {border-color: hsl(192, 100%, 67%) !important;}
-.todo-checkbox:not(:first-of-type):checked ~ .todo-input {
+.todo-checkbox:not(#add-todo-checkbox):checked ~ .todo-input {
     text-decoration: line-through;
     pointer-events: none;
 }
@@ -184,5 +184,5 @@ body[data-theme='dark'] .todo-holder--todo--bottom-of-todos--inner-text {color: 
 body[data-theme='dark'] .todo-checkbox:checked{border: 1px solid white;}
 body[data-theme='dark'] .todo-checkbox:checked ~ .todo-input{color: rgba(256,256,256,.2);}
 body[data-theme='dark'] .todo-holder--todo--list--item:hover > .todo-checkbox:not(:checked) ~ .todo-input{color: white;}
-body[data-theme='dark'] .todo-holder--todo--bottom-items--center-items-button:hover {color: rgba(256, 256, 256, .5);}
-body[data-theme='dark'] .todo-holder--todo--bottom-items--clear-btn:hover {color: rgba(256, 256, 256, .5);}
+body[data-theme='dark'] .todo-holder--todo--bottom-items--center-items-button:hover {color: white;}
+body[data-theme='dark'] .todo-holder--todo--bottom-items--clear-btn:hover {color: white;}
