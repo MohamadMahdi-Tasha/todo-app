@@ -203,6 +203,53 @@ body[data-theme='light'] .todo-holder--todo--bottom-of-todos--inner-text {color:
     font-weight: normal;
 }
 
+/*Toasters*/
+.toaster-holder > div {width: 100%;}
+.toaster.alert {background-color: #ff3939;}
+.toaster-holder {
+    position: fixed;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+    pointer-events: none;
+}
+
+.toaster {
+    border-radius: .25rem;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: .3s;
+    width: 20%;
+    pointer-events: visible;
+    text-align: left;
+}
+
+.toaster--top-side-holder {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.toaster--content--details {
+    width: 100%;
+    white-space: normal;
+    font-size: unset;
+}
+
+.toaster--content {
+    padding: 1rem;
+    color: white;
+}
+
+.toaster--content--name {
+    margin-bottom: 1rem;
+}
+
 /*Pseudo Selectors*/
 .todo-checkbox:checked:after {content: '✔️';}
 .todo-checkbox:checked {background: var(--Check-Background);}
