@@ -298,7 +298,12 @@ body[data-theme='light'] .todo-holder--todo--bottom-items--clear-btn:hover {colo
     .todo-holder--todo--bottom-of-todos--inner-text {color: rgba(256,256,256,.2);}
 }
 
-@media (max-width: 804px) {  .todo-holder--todo {width: 100%;}  }
+@media (max-width: 804px) {
+    .todo-holder--todo {width: 100%;}
+    .toaster-holder {padding: 1rem 1rem 0 1rem;}
+    .toaster {width: 100%;}
+}
+
 @media (max-width: 440px) {
     .todo-holder--todo--bottom-items--center-items-button {padding: 1rem;}
     .todo-holder--todo--bottom-items--items-left,
