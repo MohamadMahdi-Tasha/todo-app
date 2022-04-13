@@ -251,26 +251,6 @@ body[data-theme='light'] .todo-holder--todo--bottom-items--clear-btn:hover {colo
     .todo-holder--todo--bottom-of-todos--inner-text {color: rgba(256,256,256,.2);}
 }
 
-@media (prefers-color-scheme: light) {
-    body {background-color: white;}
-    .todo-checkbox:checked{border: 1px solid black;}
-    .todo-checkbox:checked ~ .todo-input{color: rgba(0,0,0,.2);}
-    .todo-holder--todo--list--item:hover > div:first-of-type > .todo-checkbox:not(:checked) ~ .todo-input{color: black}
-    .todo-holder--todo--bottom-items--center-items-button:hover {color: black;}
-    .todo-holder--todo--bottom-items--clear-btn:hover {color: black;}
-    .todo-holder--todo--input-holder {background-color: white;}
-    .todo-checkbox{border: 1px solid rgba(0,0,0,.2);}
-    .todo-input{color: rgba(0, 0, 0, .5) !important;}
-    .todo-input:focus{color: black !important;}
-    .todo-input::placeholder {color: rgba(0, 0, 0, .5);}
-    .todo-holder--todo--list--item,
-    .todo-holder--todo--bottom-items{background-color: white;}
-    .todo-holder--todo--bottom-items--items-left,
-    .todo-holder--todo--bottom-items--center-items-button,
-    .todo-holder--todo--bottom-items--clear-btn{color: rgba(0,0,0,.6);}
-    .todo-holder--todo--bottom-of-todos--inner-text {color: rgba(0,0,0,.6);}
-}
-
 @media (max-width: 804px) {  .todo-holder--todo {width: 100%;}  }
 @media (max-width: 440px) {
     .todo-holder--todo--bottom-items--center-items-button {padding: 1rem;}
