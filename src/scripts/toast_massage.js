@@ -3,7 +3,7 @@
 const toasters = document.getElementById('toasters');
 
 // A Function That Creates New Toast Notification.
-function add_toast(name = 'red', details = 'blue') {
+function add_toast(name = 'Name',type = 'alert', details = 'Details') {
     // Creating Elements
     const toaster = document.createElement('div');
     const toaster_top = document.createElement('div');
@@ -14,7 +14,7 @@ function add_toast(name = 'red', details = 'blue') {
     const toaster_details = document.createElement('p');
 
     // Doing Some Settings
-    toaster.className = 'toaster alert';
+    toaster.className = `toaster ${type}`;
     toaster.addEventListener('click', () => close_toast(toaster))
     toaster.appendChild(toaster_top);
     toaster.appendChild(toaster_content);
