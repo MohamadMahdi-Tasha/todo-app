@@ -62,6 +62,7 @@ body[data-theme='light'] .todo-holder--todo--bottom-items--clear-btn{color: rgba
 body[data-theme='light'] .todo-holder--todo--bottom-of-todos--inner-text {color: rgba(0,0,0,.6);}
 
 /*Styles*/
+body::-webkit-scrollbar {display: none;}
 .todo-holder--todo {width: 50%;}
 .todo-holder--todo--list {list-style: none;}
 .todo-holder--todo--bottom-items--items-left > span {margin-right: .25rem;}
