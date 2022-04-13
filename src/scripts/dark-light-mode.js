@@ -7,6 +7,7 @@ const top_side_img = document.getElementById('top-side-img');
 let clicks_of_them_switch = 0;
 
 // Adding Event Listener On Theme Switcher Btn That Listens To Click And Switches Theme To Light And Dark Mode
+// And Changes Icon Of Theme Btn And Changes The Image Of Top Side.
 theme_switch_btn.addEventListener('click', () => {
     clicks_of_them_switch ++;
     if (clicks_of_them_switch % 2 !== 0) {
