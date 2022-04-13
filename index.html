@@ -30,20 +30,7 @@
 <body data-theme="dark">
 <!--Structure Of Page Goes Here-->
 <!--A Toaster Structure-->
-<div class="toaster-holder">
-    <div>
-        <div class="toaster alert">
-            <div class="toaster--top-side-holder"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="white" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg></div>
-            <div class="toaster--content">
-                <h3 class="toaster--content--name" id="toaster-name">alert!</h3>
-                <p class="toaster--content--details" id="toaster-details">alert!alert!alert!</p>
-            </div>
-            <div class="toaster--bottom-slider">
-                <div class="toaster--bottom-slider--inner"></div>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="toaster-holder"><div id="toasters"></div></div>
 <!--Top Side In The Background-->
 <img class="bg-top-section" src="src/img/bg-top-side.jpg" alt="Image">
 <!--To Do Holder-->
@@ -143,5 +130,6 @@
 </div>
 <!--Linking Our Js File-->
 <script src="src/scripts/new_todo.js"></script>
+<script src="src/scripts/toast_massage.js"></script>
 </body>
 </html>

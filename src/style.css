@@ -204,11 +204,12 @@ body[data-theme='light'] .todo-holder--todo--bottom-of-todos--inner-text {color:
 }
 
 /*Toasters*/
-.toaster-holder > div {width: 100%;}
 .toaster.alert {background-color: #ff3939;}
 .toaster--content--name {margin-bottom: 1rem;}
 .toaster-holder {
     position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: end;
     justify-content: start;
@@ -235,6 +236,11 @@ body[data-theme='light'] .todo-holder--todo--bottom-of-todos--inner-text {color:
     display: flex;
     align-items: center;
     justify-content: end;
+}
+
+.toaster-holder > div {
+    transition: .3s;
+    width: 100%;
 }
 
 .toaster--content--details {
