@@ -5,7 +5,7 @@ const add_todo_checkbox = document.getElementById('add-todo-checkbox');
 const todo_list = document.getElementById('todo-list');
 
 // A Function That Creates Todo Item
-function add_todo(name='TODO') {
+function add_todo(name) {
     // Creating Element
     const list_element = document.createElement('li');
     const todo_div = document.createElement('div');
@@ -21,7 +21,7 @@ function add_todo(name='TODO') {
     input.className = 'todo-input';
     todo_div.className = 'todo-holder--todo--list--item';
     input.value = name;
-    
+
     // If New To Do Checkbox Is Checked Then Create Checked Checkbox.
     if (add_todo_checkbox.checked) {checkbox.setAttribute('checked', 'true');}
 
@@ -35,6 +35,9 @@ function add_todo(name='TODO') {
 
     // Appending Todo Item To Its List.
     todo_list.appendChild(list_element);
+
+    // Removing Everything Inside Add Todo input.
+    add_todo_input.value = '';
 }
 
 // Adding event Listener To Top Side Input That Listens To keydown
