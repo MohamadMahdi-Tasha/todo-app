@@ -71,6 +71,7 @@ body::-webkit-scrollbar {display: none;}
 .bg-top-section {
     width: 100%;
     min-height: 40vh;
+    object-fit: cover;
 }
 
 .todo-holder {
