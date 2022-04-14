@@ -82,12 +82,12 @@ add_todo_input.addEventListener('keydown', (key) => {
 })
 
 // Adding event Listener On Auto Generated Todos , Close Buttons That Listens To Click And Removes That Todo.
-auto_todo_close_btn_1.addEventListener('click', () => {auto_todo_close_btn_1.parentElement.parentElement.remove();});
-auto_todo_close_btn_2.addEventListener('click', () => {auto_todo_close_btn_2.parentElement.parentElement.remove();});
-auto_todo_close_btn_3.addEventListener('click', () => {auto_todo_close_btn_3.parentElement.parentElement.remove();});
-auto_todo_close_btn_4.addEventListener('click', () => {auto_todo_close_btn_4.parentElement.parentElement.remove();});
-auto_todo_close_btn_5.addEventListener('click', () => {auto_todo_close_btn_5.parentElement.parentElement.remove();});
-auto_todo_close_btn_6.addEventListener('click', () => {auto_todo_close_btn_6.parentElement.parentElement.remove();});
+auto_todo_close_btn_1.addEventListener('click', () => {auto_todo_close_btn_1.parentElement.parentElement.remove();set_todos_count()});
+auto_todo_close_btn_2.addEventListener('click', () => {auto_todo_close_btn_2.parentElement.parentElement.remove();set_todos_count()});
+auto_todo_close_btn_3.addEventListener('click', () => {auto_todo_close_btn_3.parentElement.parentElement.remove();set_todos_count()});
+auto_todo_close_btn_4.addEventListener('click', () => {auto_todo_close_btn_4.parentElement.parentElement.remove();set_todos_count()});
+auto_todo_close_btn_5.addEventListener('click', () => {auto_todo_close_btn_5.parentElement.parentElement.remove();set_todos_count()});
+auto_todo_close_btn_6.addEventListener('click', () => {auto_todo_close_btn_6.parentElement.parentElement.remove();set_todos_count()});
 
 // Calling 'set_todos_count' Function To Set Number Of Count At First
 set_todos_count();
