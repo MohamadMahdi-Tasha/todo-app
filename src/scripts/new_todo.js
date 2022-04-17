@@ -19,8 +19,6 @@ const auto_todo_item_4 = document.getElementById('auto-todo-item-4');
 const auto_todo_item_5 = document.getElementById('auto-todo-item-5');
 const auto_todo_item_6 = document.getElementById('auto-todo-item-6');
 
-const todo_item_state = {is_checked: false}
-
 // A Function That Sets Number Of Todos Count Number To Remaining Children Counts Of Todos List.
 const set_todos_count = (value = 0) => todos_count_span.textContent = todo_list.childElementCount - value;
 
@@ -44,13 +42,8 @@ function add_todo(name) {
         checkbox.className = 'todo-checkbox';
         checkbox.addEventListener('click', () => {
             clicks_of_checkbox ++;
-            if (clicks_of_checkbox % 2 !== 0) {
-                todo_item_state.is_checked = true;
-                todo_div.setAttribute('data-checked', true);
-            } else {
-                todo_item_state.is_checked = false;
-                todo_div.setAttribute('data-checked', false);
-            }
+            if (clicks_of_checkbox % 2 !== 0) {todo_div.setAttribute('data-checked', true);}
+            else {todo_div.setAttribute('data-checked', false);}
         })
 
         input.type = 'text';
@@ -85,14 +78,17 @@ function add_todo(name) {
 // Event And Checks If Clicked Key Is Enter And If Its Is , It Calls 'add_todo' Function
 add_todo_input.addEventListener('keydown', (key) => {
     if (key.key === 'Enter') {
-        auto_todo_item_1.remove();
-        auto_todo_item_2.remove();
-        auto_todo_item_3.remove();
-        auto_todo_item_4.remove();
-        auto_todo_item_5.remove();
-        auto_todo_item_6.remove();
-        add_todo(add_todo_input.value);
-        set_todos_count()
+        if (add_todo_input.value === '') {add_toast('Alert','alert', 'Please Fill The Todo Name')}
+        else {
+            auto_todo_item_1.remove();
+            auto_todo_item_2.remove();
+            auto_todo_item_3.remove();
+            auto_todo_item_4.remove();
+            auto_todo_item_5.remove();
+            auto_todo_item_6.remove();
+            add_todo(add_todo_input.value);
+            set_todos_count()
+        }
     }
 })
 

@@ -27,5 +27,5 @@ completed_btn.addEventListener('click', () => {
 // Adding Event Listener On Clear All Button That Removes Every To Do Item And Sets Number Of Todos;
 clear_all_btn.addEventListener('click', () => {
     document.querySelectorAll('.todo-holder--todo--list > li').forEach(item => item.remove());
-    set_todos_count()
+    set_todos_count();
 })
