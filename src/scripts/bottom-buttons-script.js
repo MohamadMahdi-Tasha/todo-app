@@ -12,17 +12,9 @@ function activate_btn(btn, btn2, btn3) {
     btn3.classList.remove('active');
 }
 
-all_btn.addEventListener('click', () => {
-    activate_btn(all_btn, active_btn, completed_btn);
-})
-
-active_btn.addEventListener('click', () => {
-    activate_btn(active_btn, all_btn, completed_btn);
-})
-
-completed_btn.addEventListener('click', () => {
-    activate_btn(completed_btn, active_btn, all_btn);
-})
+all_btn.addEventListener('click', () => {activate_btn(all_btn, active_btn, completed_btn);})
+active_btn.addEventListener('click', () => {activate_btn(active_btn, all_btn, completed_btn);})
+completed_btn.addEventListener('click', () => {activate_btn(completed_btn, active_btn, all_btn);})
 
 // Adding Event Listener On Clear All Button That Removes Every To Do Item And Sets Number Of Todos;
 clear_all_btn.addEventListener('click', () => {
