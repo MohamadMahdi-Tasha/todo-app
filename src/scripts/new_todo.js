@@ -19,6 +19,8 @@ const auto_todo_item_4 = document.getElementById('auto-todo-item-4');
 const auto_todo_item_5 = document.getElementById('auto-todo-item-5');
 const auto_todo_item_6 = document.getElementById('auto-todo-item-6');
 
+const todo_item_state = {is_checked: false}
+
 // A Function That Sets Number Of Todos Count Number To Remaining Children Counts Of Todos List.
 const set_todos_count = (value = 0) => todos_count_span.textContent = todo_list.childElementCount - value;
 
@@ -34,10 +36,23 @@ function add_todo(name) {
         const delete_btn = document.createElement('button');
         const checkbox = document.createElement('input');
         const input = document.createElement('input');
+        let clicks_of_checkbox = 0;
+
 
         // Setting Some Attributes.
         checkbox.type = 'checkbox';
         checkbox.className = 'todo-checkbox';
+        checkbox.addEventListener('click', () => {
+            clicks_of_checkbox ++;
+            if (clicks_of_checkbox % 2 !== 0) {
+                todo_item_state.is_checked = true;
+                todo_div.setAttribute('data-checked', true);
+            } else {
+                todo_item_state.is_checked = false;
+                todo_div.setAttribute('data-checked', false);
+            }
+        })
+
         input.type = 'text';
         input.className = 'todo-input';
         todo_div.className = 'todo-holder--todo--list--item';
