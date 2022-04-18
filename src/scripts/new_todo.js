@@ -5,13 +5,6 @@ const add_todo_checkbox = document.getElementById('add-todo-checkbox');
 const todo_list = document.getElementById('todo-list');
 const todos_count_span = document.getElementById('todo-remaining-num');
 
-const auto_todo_close_btn_1 = document.getElementById('auto-todo-close-btn-1');
-const auto_todo_close_btn_2 = document.getElementById('auto-todo-close-btn-2');
-const auto_todo_close_btn_3 = document.getElementById('auto-todo-close-btn-3');
-const auto_todo_close_btn_4 = document.getElementById('auto-todo-close-btn-4');
-const auto_todo_close_btn_5 = document.getElementById('auto-todo-close-btn-5');
-const auto_todo_close_btn_6 = document.getElementById('auto-todo-close-btn-6');
-
 const auto_todo_item_1 = document.getElementById('auto-todo-item-1');
 const auto_todo_item_2 = document.getElementById('auto-todo-item-2');
 const auto_todo_item_3 = document.getElementById('auto-todo-item-3');
@@ -24,7 +17,16 @@ let all_todos = [];
 let completed_todos = [];
 
 // A Function That Sets Number Of Todos Count Number To Remaining Children Counts Of Todos List.
-const set_todos_count = (value = 0) => todos_count_span.textContent = todo_list.childElementCount - value;
+const set_todos_count = () => todos_count_span.textContent = all_todos.length;
+
+// Selecting Every Close Button Of Todo Item That Adds Event Listener On Each Of Them And Listens To
+// Click And Removes Its Parent And Sets The Count
+document.querySelectorAll('.todo-holder--todo--list--item > button').forEach(button => {
+    button.addEventListener('click', () => {
+        button.parentElement.parentElement.remove();
+        set_todos_count();
+    })
+})
 
 // A Function That Creates Todo Item
 function add_todo(name) {
@@ -60,6 +62,7 @@ function add_todo(name) {
             list_element.remove();
             set_todos_count();
         })
+
 
         // If New To Do Checkbox Is Checked Then Create Checked Checkbox.
         if (add_todo_checkbox.checked) {checkbox.setAttribute('checked', 'true');}
@@ -99,14 +102,6 @@ add_todo_input.addEventListener('keydown', (key) => {
         }
     }
 })
-
-// Adding event Listener On Auto Generated Todos , Close Buttons That Listens To Click And Removes That Todo.
-auto_todo_close_btn_1.addEventListener('click', () => {auto_todo_close_btn_1.parentElement.parentElement.remove();set_todos_count()});
-auto_todo_close_btn_2.addEventListener('click', () => {auto_todo_close_btn_2.parentElement.parentElement.remove();set_todos_count()});
-auto_todo_close_btn_3.addEventListener('click', () => {auto_todo_close_btn_3.parentElement.parentElement.remove();set_todos_count()});
-auto_todo_close_btn_4.addEventListener('click', () => {auto_todo_close_btn_4.parentElement.parentElement.remove();set_todos_count()});
-auto_todo_close_btn_5.addEventListener('click', () => {auto_todo_close_btn_5.parentElement.parentElement.remove();set_todos_count()});
-auto_todo_close_btn_6.addEventListener('click', () => {auto_todo_close_btn_6.parentElement.parentElement.remove();set_todos_count()});
 
 // Calling 'set_todos_count' Function To Set Number Of Count At First
 set_todos_count();
