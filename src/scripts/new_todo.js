@@ -102,6 +102,3 @@ add_todo_input.addEventListener('keydown', (key) => {
         }
     }
 })
-
-// Calling 'set_todos_count' Function To Set Number Of Count At First
-set_todos_count();
