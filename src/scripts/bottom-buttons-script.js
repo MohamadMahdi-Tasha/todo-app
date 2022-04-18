@@ -31,5 +31,6 @@ completed_btn.addEventListener('click', () => {
 clear_all_btn.addEventListener('click', () => {
     document.querySelectorAll('.todo-holder--todo--list > li').forEach(item => item.remove());
     all_todos.splice(0, all_todos.length);
+    completed_todos.splice(0, completed_todos.length);
     set_todos_count();
 })
