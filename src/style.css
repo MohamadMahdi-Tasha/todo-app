@@ -276,6 +276,27 @@ body::-webkit-scrollbar {display: none;}
     100%{width: 100%;}
 }
 
+/*right Side Menu*/
+.left-side-menu::-webkit-scrollbar {display: none;}
+body[data-theme='light'] .left-side-menu {background-color: #ececec;}
+.left-side-menu-holder {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+    z-index: 1000;
+}
+
+.left-side-menu {
+    width: 30%;
+    height: 100%;
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
+    position: fixed;
+    background-color: var(--Very-Dark-Blue);
+    z-index: 1001;
+    overflow: scroll;
+}
+
 /*Pseudo Selectors*/
 .todo-checkbox:checked:after {content: '✔️';}
 .todo-checkbox:checked {background: var(--Check-Background);}
@@ -334,6 +355,7 @@ body[data-theme='light'] .todo-holder--todo--bottom-items--clear-btn:hover {colo
     .todo-holder--todo--bottom-items--center-items-button {padding: 1rem;}
     .todo-holder--todo--bottom-items--items-left,
     .todo-holder--todo--bottom-items--clear-btn{margin: 1rem;}
+    .left-side-menu {width: 70%;}
     .todo-holder--todo--bottom-items {
         display: flex;
         flex-direction: column;
