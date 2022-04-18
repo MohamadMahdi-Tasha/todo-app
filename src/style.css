@@ -68,6 +68,10 @@ body::-webkit-scrollbar {display: none;}
 .todo-holder--todo--bottom-items--items-left > span {margin-right: .25rem;}
 .todo-holder--todo--bottom-items--center-items-button:not(:last-of-type) {margin-right: .5rem;}
 .todo-holder--todo--bottom-items--center-items-button.active {color: var(--Bright-Blue) !important;}
+.todo-holder--todo--list--item.dragstart {
+    border-bottom-color: var(--Bright-Blue);
+}
+
 .bg-top-section {
     width: 100%;
     min-height: 40vh;
@@ -144,6 +148,7 @@ body::-webkit-scrollbar {display: none;}
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    border-bottom: 1px solid transparent;
 }
 
 .todo-holder--todo--list--item > div {

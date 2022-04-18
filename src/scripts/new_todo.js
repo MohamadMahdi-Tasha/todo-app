@@ -47,6 +47,12 @@ function add_todo(name) {
         checkbox.type = 'checkbox';
         checkbox.className = 'todo-checkbox';
         todo_div.id = `todo-${number_id}`;
+        input.type = 'text';
+        input.className = 'todo-input';
+        todo_div.className = 'todo-holder--todo--list--item';
+        input.value = name;
+        todo_div.draggable = true;
+
         checkbox.addEventListener('click', () => {
             completed_todos.push(todo_div);
             clicks_of_checkbox ++;
@@ -54,10 +60,6 @@ function add_todo(name) {
             else {todo_div.setAttribute('data-checked', false);}
         })
 
-        input.type = 'text';
-        input.className = 'todo-input';
-        todo_div.className = 'todo-holder--todo--list--item';
-        input.value = name;
         delete_btn.addEventListener('click', () => {
             list_element.remove();
             set_todos_count();
@@ -81,6 +83,7 @@ function add_todo(name) {
         // Removing Everything Inside Add Todo input.
         add_todo_input.value = '';
 
+        // Pushing Element To 'all_todos' List;
         all_todos.push(todo_div)
     }
 }
