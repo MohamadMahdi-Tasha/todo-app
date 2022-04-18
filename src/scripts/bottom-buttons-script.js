@@ -15,6 +15,7 @@ function activate_btn(btn, btn2, btn3) {
 all_btn.addEventListener('click', () => {
     activate_btn(all_btn, active_btn, completed_btn);
     console.log(all_todos)
+    show_menu()
 })
 
 active_btn.addEventListener('click', () => {
