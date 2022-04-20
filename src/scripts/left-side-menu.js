@@ -14,5 +14,5 @@ function close_menu(menu) {
     menu.setAttribute('data-showing', false);
 }
 
-// Adding Event Listener On 'left_side_menu_holder' That Listens To CLick And Calls 'close_menu' Function
+// Adding Event Listener On A Menu That Has Attribute data-showing="true" That Listens To CLick And Calls 'close_menu' Function Om It.
 left_side_menu_holder.addEventListener('click', () => close_menu(document.querySelector('.left-side-menu[data-showing="true"]')));
