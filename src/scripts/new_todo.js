@@ -23,10 +23,19 @@ const set_todos_count = () => todos_count_span.textContent = all_todos.length;
 // Click And Removes Its Parent And Sets The Count
 document.querySelectorAll('.todo-holder--todo--list--item > button').forEach(button => {
     button.addEventListener('click', () => {
+        console.log(button.parentElement.parentElement)
         button.parentElement.parentElement.remove();
         set_todos_count();
     })
 })
+
+// A Function That Removes Todo Element If Its Value Is Empty.
+function remove_element_by_empty_input(input) {
+    if (input.value === '') {
+        input.parentElement.parentElement.parentElement.remove();
+        set_todos_count();
+    }
+}
 
 // A Function That Creates Todo Item
 function add_todo(name) {
@@ -52,6 +61,8 @@ function add_todo(name) {
         todo_div.className = 'todo-holder--todo--list--item';
         input.value = name;
         todo_div.draggable = true;
+
+        input.onchange = () => remove_element_by_empty_input(input);
 
         checkbox.addEventListener('click', () => {
             completed_todos.push(todo_div);
@@ -105,3 +116,6 @@ add_todo_input.addEventListener('keydown', (key) => {
         }
     }
 })
+
+
+document.querySelectorAll('.todo-input').forEach(input => {input.addEventListener('change', () => {remove_element_by_empty_input(input)})})
