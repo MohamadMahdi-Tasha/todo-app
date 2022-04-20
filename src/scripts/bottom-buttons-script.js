@@ -4,6 +4,9 @@ const all_btn = document.getElementById("all-btn");
 const active_btn = document.getElementById("active-btn");
 const completed_btn = document.getElementById("completed-btn");
 const clear_all_btn = document.getElementById('clear-all-btn');
+const left_side_menu_all = document.getElementById('left-side-menu-all');
+const left_side_menu_active = document.getElementById('left-side-menu-active');
+const left_side_menu_completed = document.getElementById('left-side-menu-completed');
 
 // A Function That Activates Clicked Button And Deactivates Other Buttons
 function activate_btn(btn, btn2, btn3) {
@@ -14,32 +17,17 @@ function activate_btn(btn, btn2, btn3) {
 
 all_btn.addEventListener('click', () => {
     activate_btn(all_btn, active_btn, completed_btn);
-    all_todos.forEach(item => {
-        item.lastChild.remove();
-        left_side_menu.firstElementChild.appendChild(item);
-    })
-
-    show_menu();
+    show_menu(left_side_menu_all);
 })
 
 active_btn.addEventListener('click', () => {
     activate_btn(active_btn, all_btn, completed_btn);
-    all_todos.filter(item => !completed_todos.includes(item)).forEach(item => {
-        item.lastChild.remove();
-        left_side_menu.firstElementChild.appendChild(item);
-    })
-
-    show_menu();
+    show_menu(left_side_menu_active);
 })
 
 completed_btn.addEventListener('click', () => {
     activate_btn(completed_btn, active_btn, all_btn);
-    completed_todos.forEach(item => {
-        item.lastChild.remove();
-        left_side_menu.firstElementChild.appendChild(item);
-    })
-
-    show_menu();
+    show_menu(left_side_menu_completed);
 })
 
 // Adding Event Listener On Clear All Button That Removes Every To Do Item And Sets Number Of Todos;
