@@ -5,13 +5,6 @@ const add_todo_checkbox = document.getElementById('add-todo-checkbox');
 const todo_list = document.getElementById('todo-list');
 const todos_count_span = document.getElementById('todo-remaining-num');
 
-const auto_todo_item_1 = document.getElementById('auto-todo-item-1');
-const auto_todo_item_2 = document.getElementById('auto-todo-item-2');
-const auto_todo_item_3 = document.getElementById('auto-todo-item-3');
-const auto_todo_item_4 = document.getElementById('auto-todo-item-4');
-const auto_todo_item_5 = document.getElementById('auto-todo-item-5');
-const auto_todo_item_6 = document.getElementById('auto-todo-item-6');
-
 let number_id = 0;
 let all_todos = [];
 let completed_todos = [];
@@ -107,12 +100,7 @@ add_todo_input.addEventListener('keydown', (key) => {
     if (key.key === 'Enter') {
         if (add_todo_input.value === '') {add_toast('Alert','alert', 'Please Fill The Todo Name')}
         else {
-            auto_todo_item_1.remove();
-            auto_todo_item_2.remove();
-            auto_todo_item_3.remove();
-            auto_todo_item_4.remove();
-            auto_todo_item_5.remove();
-            auto_todo_item_6.remove();
+            document.querySelectorAll('.auto-todo').forEach(item => item.remove())
             add_todo(add_todo_input.value);
             set_todos_count()
         }
