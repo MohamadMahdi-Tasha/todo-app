@@ -12,6 +12,7 @@ function show_menu(menu) {
 function close_menu(menu) {
     left_side_menu_holder.setAttribute('data-showing', false);
     menu.setAttribute('data-showing', false);
+    menu.innerHTML = '';
 }
 
 // Adding Event Listener On A Menu That Has Attribute data-showing="true" That Listens To CLick And Calls 'close_menu' Function Om It.

@@ -15,19 +15,38 @@ function activate_btn(btn, btn2, btn3) {
     btn3.classList.remove('active');
 }
 
+// A Function That Clones List Of Given Todos And Append Them To Their List
+function clone_append_item(todo_list, menu) {
+    // Looping Through Each Item
+    todo_list.forEach(todo => {
+        // Getting Clone Of Each Item
+        const clone_of_todos = todo.cloneNode(true);
+        // Removing id Of Element
+        clone_of_todos.removeAttribute('id');
+        // Removing Delete Button Of It
+        clone_of_todos.lastElementChild.remove();
+        // Appending To Its Menu
+        menu.appendChild(clone_of_todos);
+    })
+    // Showing Its Menu
+    show_menu(menu);
+}
+
+// Adding Event Listener On Each Bottom Button That Listens To Clock And Its Button And Calls
+// 'clone_append_item' On It Parameters
 all_btn.addEventListener('click', () => {
     activate_btn(all_btn, active_btn, completed_btn);
-    show_menu(left_side_menu_all);
+    clone_append_item(all_todos, left_side_menu_all);
 })
 
 active_btn.addEventListener('click', () => {
     activate_btn(active_btn, all_btn, completed_btn);
-    show_menu(left_side_menu_active);
+    clone_append_item(all_todos.filter(item => !completed_todos.includes(item)), left_side_menu_active);
 })
 
 completed_btn.addEventListener('click', () => {
     activate_btn(completed_btn, active_btn, all_btn);
-    show_menu(left_side_menu_completed);
+    clone_append_item(completed_todos, left_side_menu_completed);
 })
 
 // Adding Event Listener On Clear All Button That Removes Every To Do Item And Sets Number Of Todos;
