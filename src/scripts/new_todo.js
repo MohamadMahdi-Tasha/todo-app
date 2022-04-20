@@ -16,18 +16,20 @@ let number_id = 0;
 let all_todos = [];
 let completed_todos = [];
 
-// A Function That Sets Number Of Todos Count Number To Remaining Children Counts Of Todos List.
-const set_todos_count = () => todos_count_span.textContent = all_todos.length;
-
 // Selecting Every Close Button Of Todo Item That Adds Event Listener On Each Of Them And Listens To
 // Click And Removes Its Parent And Sets The Count
 document.querySelectorAll('.todo-holder--todo--list--item > button').forEach(button => {
     button.addEventListener('click', () => {
-        console.log(button.parentElement.parentElement)
         button.parentElement.parentElement.remove();
         set_todos_count();
     })
 })
+
+// A Function That Sets Number Of Todos Count Number To Remaining Children Counts Of Todos List.
+const set_todos_count = () => todos_count_span.textContent = all_todos.length;
+
+// Adding Event Listener On Each Todo  Input That Listens To Change And Calls  'remove_element_by_empty_input' Function
+document.querySelectorAll('.todo-input').forEach(input => {input.addEventListener('change', () => {remove_element_by_empty_input(input)})})
 
 // A Function That Removes Todo Element If Its Value Is Empty.
 function remove_element_by_empty_input(input) {
@@ -116,6 +118,3 @@ add_todo_input.addEventListener('keydown', (key) => {
         }
     }
 })
-
-
-document.querySelectorAll('.todo-input').forEach(input => {input.addEventListener('change', () => {remove_element_by_empty_input(input)})})
