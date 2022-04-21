@@ -20,7 +20,7 @@ let all_todos = [
 // A Function That Deletes Selected Todo And Removes It From All Todos List.
 function delete_todo(button) {
     const index_of_todo = all_todos.findIndex(element => element === button.parentElement);
-    button.parentElement.remove();
+    button.parentElement.parentElement.remove();
 
     all_todos.splice(index_of_todo, 1)
     set_todos_count();
@@ -79,10 +79,7 @@ function add_todo(name) {
             else {todo_div.setAttribute('data-checked', false);}
         })
 
-        delete_btn.addEventListener('click', () => {
-            list_element.remove();
-            set_todos_count();
-        })
+        delete_btn.addEventListener('click', () => delete_todo(delete_btn))
 
         // If New To Do Checkbox Is Checked Then Create Checked Checkbox.
         if (add_todo_checkbox.checked) {checkbox.setAttribute('checked', 'true');}
