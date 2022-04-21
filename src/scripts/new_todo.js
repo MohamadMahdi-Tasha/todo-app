@@ -20,10 +20,14 @@ let all_todos = [
 // A Function That Deletes Selected Todo And Removes It From All Todos List.
 function delete_todo(button) {
     const index_of_todo = all_todos.findIndex(element => element === button.parentElement);
-    button.parentElement.parentElement.remove();
-
     all_todos.splice(index_of_todo, 1)
+    if (button.previousElementSibling.firstElementChild.checked) {
+        completed_todos.splice(index_of_todo, 1)
+        console.log(completed_todos)
+    }
+
     set_todos_count();
+    button.parentElement.parentElement.remove();
 }
 
 // Adding Event Listener On Each Close Button Of Todo Element That Listens To Click And Calls 'delete_todo' Function On Button
