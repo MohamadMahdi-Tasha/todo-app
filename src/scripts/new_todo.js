@@ -5,17 +5,30 @@ const add_todo_checkbox = document.getElementById('add-todo-checkbox');
 const todo_list = document.getElementById('todo-list');
 const todos_count_span = document.getElementById('todo-remaining-num');
 
+let enter_on_input = 0;
 let number_id = 0;
-let all_todos = [];
 let completed_todos = [];
+let all_todos = [
+    document.getElementById('auto-todo-item-1').firstElementChild,
+    document.getElementById('auto-todo-item-2').firstElementChild,
+    document.getElementById('auto-todo-item-3').firstElementChild,
+    document.getElementById('auto-todo-item-4').firstElementChild,
+    document.getElementById('auto-todo-item-5').firstElementChild,
+    document.getElementById('auto-todo-item-6').firstElementChild,
+];
 
-// Selecting Every Close Button Of Todo Item That Adds Event Listener On Each Of Them And Listens To
-// Click And Removes Its Parent And Sets The Count
+// A Function That Deletes Selected Todo And Removes It From All Todos List.
+function delete_todo(button) {
+    const index_of_todo = all_todos.findIndex(element => element === button.parentElement);
+    button.parentElement.remove();
+
+    all_todos.splice(index_of_todo, 1)
+    set_todos_count();
+}
+
+// Adding Event Listener On Each Close Button Of Todo Element That Listens To Click And Calls 'delete_todo' Function On Button
 document.querySelectorAll('.todo-holder--todo--list--item > button').forEach(button => {
-    button.addEventListener('click', () => {
-        button.parentElement.parentElement.remove();
-        set_todos_count();
-    })
+    button.addEventListener('click', () => delete_todo(button));
 })
 
 // A Function That Sets Number Of Todos Count Number To Remaining Children Counts Of Todos List.
@@ -71,7 +84,6 @@ function add_todo(name) {
             set_todos_count();
         })
 
-
         // If New To Do Checkbox Is Checked Then Create Checked Checkbox.
         if (add_todo_checkbox.checked) {checkbox.setAttribute('checked', 'true');}
 
@@ -100,9 +112,14 @@ add_todo_input.addEventListener('keydown', (key) => {
     if (key.key === 'Enter') {
         if (add_todo_input.value === '') {add_toast('Alert','alert', 'Please Fill The Todo Name')}
         else {
+            enter_on_input ++;
+            if (enter_on_input === 1) {all_todos = [];}
+
             document.querySelectorAll('.auto-todo').forEach(item => item.remove())
             add_todo(add_todo_input.value);
             set_todos_count()
         }
     }
 })
+
+set_todos_count();
