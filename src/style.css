@@ -276,9 +276,9 @@ body::-webkit-scrollbar {display: none;}
     100%{width: 100%;}
 }
 
-/*right Side Menu*/
-.left-side-menu::-webkit-scrollbar {display: none;}
+/*left Side Menu*/
 body[data-theme='light'] .left-side-menu {background-color: #ececec;}
+.left-side-menu::-webkit-scrollbar {display: none;}
 .left-side-menu-holder[data-showing="false"],
 .left-side-menu[data-showing="false"]{right: 100%;}
 .left-side-menu-holder[data-showing="true"]{right: 0;}

@@ -72,7 +72,6 @@ function add_todo(name) {
         input.className = 'todo-input';
         todo_div.className = 'todo-holder--todo--list--item';
         input.value = name;
-        todo_div.draggable = true;
 
         input.onchange = () => remove_element_by_empty_input(input);
 
