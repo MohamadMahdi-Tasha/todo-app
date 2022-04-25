@@ -69,6 +69,7 @@ body::-webkit-scrollbar {display: none;}
 .todo-holder--todo--bottom-items--center-items-button:not(:last-of-type) {margin-right: .5rem;}
 .todo-holder--todo--bottom-items--center-items-button.active {color: var(--Bright-Blue) !important;}
 .todo-holder--todo--list--item.dragstart {border-bottom-color: var(--Bright-Blue);}
+.left-side-menu > div {pointer-events: none !important;}
 
 .bg-top-section {
     width: 100%;
