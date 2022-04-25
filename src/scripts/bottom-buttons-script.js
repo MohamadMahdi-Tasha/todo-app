@@ -8,13 +8,6 @@ const left_side_menu_all = document.getElementById('left-side-menu-all');
 const left_side_menu_active = document.getElementById('left-side-menu-active');
 const left_side_menu_completed = document.getElementById('left-side-menu-completed');
 
-// A Function That Activates Clicked Button And Deactivates Other Buttons
-function activate_btn(btn, btn2, btn3) {
-    btn.classList.add('active');
-    btn2.classList.remove('active');
-    btn3.classList.remove('active');
-}
-
 // A Function That Clones List Of Given Todos And Append Them To Their List
 function clone_append_item(todo_list, menu) {
     // Looping Through Each Item
@@ -32,22 +25,10 @@ function clone_append_item(todo_list, menu) {
     show_menu(menu);
 }
 
-// Adding Event Listener On Each Bottom Button That Listens To Clock And Its Button And Calls
-// 'clone_append_item' On It Parameters
-all_btn.addEventListener('click', () => {
-    activate_btn(all_btn, active_btn, completed_btn);
-    clone_append_item(all_todos, left_side_menu_all);
-})
-
-active_btn.addEventListener('click', () => {
-    activate_btn(active_btn, all_btn, completed_btn);
-    clone_append_item(all_todos.filter(item => !completed_todos.includes(item)), left_side_menu_active);
-})
-
-completed_btn.addEventListener('click', () => {
-    activate_btn(completed_btn, active_btn, all_btn);
-    clone_append_item(completed_todos, left_side_menu_completed);
-})
+// Adding Event Listener On Each Bottom Button That Listens To Click And Calls 'clone_append_item' On It Parameters
+all_btn.addEventListener('click', () => {clone_append_item(all_todos, left_side_menu_all);})
+active_btn.addEventListener('click', () => {clone_append_item(all_todos.filter(item => !completed_todos.includes(item)), left_side_menu_active);})
+completed_btn.addEventListener('click', () => {clone_append_item(completed_todos, left_side_menu_completed);})
 
 // Adding Event Listener On Clear All Button That Removes Every To Do Item And Sets Number Of Todos;
 clear_all_btn.addEventListener('click', () => {
