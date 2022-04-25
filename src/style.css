@@ -147,7 +147,7 @@ body::-webkit-scrollbar {display: none;}
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid rgba(257, 257, 257, .1);
 }
 
 .todo-holder--todo--list--item > div {
