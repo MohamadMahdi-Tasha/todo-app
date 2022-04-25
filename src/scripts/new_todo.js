@@ -48,6 +48,7 @@ function add_todo(name) {
 
         input.onchange = () => remove_element_by_empty_input(input);
 
+        checkbox.addEventListener('click', () => {clicks_of_checkbox++;checkboxes(checkbox, clicks_of_checkbox)})
         delete_btn.addEventListener('click', () => delete_todo(delete_btn))
 
         // If New To Do Checkbox Is Checked Then Create Checked Checkbox.
@@ -79,7 +80,11 @@ add_todo_input.addEventListener('keydown', (key) => {
         if (add_todo_input.value === '') {add_toast('Alert','alert', 'Please Fill The Todo Name')}
         else {
             enter_on_input ++;
-            if (enter_on_input === 1) {all_todos = [];}
+
+            if (enter_on_input === 1) {
+                all_todos = [];
+                completed_todos = [];
+            }
 
             document.querySelectorAll('.auto-todo').forEach(item => item.remove())
             add_todo(add_todo_input.value);
