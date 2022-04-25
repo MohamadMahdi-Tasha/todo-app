@@ -51,9 +51,6 @@ function add_todo(name) {
         checkbox.addEventListener('click', () => {clicks_of_checkbox++;checkboxes(checkbox, clicks_of_checkbox)})
         delete_btn.addEventListener('click', () => delete_todo(delete_btn))
 
-        // If New To Do Checkbox Is Checked Then Create Checked Checkbox.
-        if (add_todo_checkbox.checked) {checkbox.setAttribute('checked', 'true');}
-
         // Appending Child To Their Parents
         list_element.appendChild(todo_div);
         todo_div.appendChild(todo_div_inner_div);
